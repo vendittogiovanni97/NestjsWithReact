@@ -1,4 +1,5 @@
 import { Prop, Schema } from '@nestjs/mongoose';
+import { Types } from 'mongoose';
 //Qui definiamo il nostro schema con classe che verrà creata nel database tramite module
 @Schema()
 export class UserDto {
@@ -13,4 +14,8 @@ export class UserDto {
 
   @Prop({})
   hobbies: string[];
+
+  // Relazione con i post dell'utente
+  @Prop({ type: [{ type: Types.ObjectId, ref: 'Post' }] })
+  posts: Types.ObjectId[];
 }

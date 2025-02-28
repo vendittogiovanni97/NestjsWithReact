@@ -2,8 +2,8 @@ import { Model } from 'mongoose';
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { UserDocument } from './users.schema';
-import { CreateUserDto } from './dto/users.dto';
-import { UserDto } from './schemas/use.schema';
+import { CreateUserDto } from '../dto/users.dto';
+import { UserDto } from '../schemas/use.schema';
 
 //Qua si crea la logica per le richieste, mentre passa nel controllers
 @Injectable()

@@ -9,7 +9,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { CreateUserDto, FindParamasId } from 'src/modules/Users/dto/users.dto';
+import { CreateUserDto, FindParamasId } from 'src/modules/dto/users.dto';
 
 //qui utilizziamo i metodi creati nel service per le richieste http
 

@@ -1,9 +1,9 @@
 import './App.css'
-import MyBio from './components/myBio'
+import AgGridComponents from './components/aGrid.components'
 
 
 function App() {
-  return <MyBio />
+  return <AgGridComponents />
 }
 
 export default App
