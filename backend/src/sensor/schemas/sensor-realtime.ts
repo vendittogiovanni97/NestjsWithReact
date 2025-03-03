@@ -17,6 +17,7 @@ export class SensorRealTime {
   @Prop({ required: true, default: Date.now })
   updatedAt: Date;
 }
+// Schema per i dati in tempo reale con un record per macAddress
 export type SensorRealTimeDocument = SensorRealTime & Document;
 export const SensorRealTimeSchema =
   SchemaFactory.createForClass(SensorRealTime);

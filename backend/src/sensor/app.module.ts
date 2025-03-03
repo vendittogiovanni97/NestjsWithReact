@@ -8,6 +8,8 @@ import {
   SensorRealTime,
   SensorRealTimeSchema,
 } from 'src/sensor/schemas/sensor-realtime';
+import { SensorDataService } from './sensor-data.service';
+import { SensorDataController } from './sensor-data.controller';
 
 @Module({
   imports: [
@@ -17,5 +19,7 @@ import {
       { name: SensorRealTime.name, schema: SensorRealTimeSchema },
     ]),
   ],
+  controllers: [SensorDataController],
+  providers: [SensorDataService],
 })
 export class SensorsModule {}
