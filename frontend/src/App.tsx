@@ -1,5 +1,5 @@
 import './App.css'
-import AgGridComponents from './components/aGrid.components'
+import AgGridComponents from './components/Grid.components'
 
 
 function App() {
