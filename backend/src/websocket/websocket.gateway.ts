@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-misused-promises */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 // src/websocket/websocket.gateway.ts
 import {
   WebSocketGateway,
@@ -26,7 +25,7 @@ export class WebsocketGateway
   }
 
   private connectToExternalWS() {
-    this.wsClient = new WebSocket('ws://192.168.7.254');
+    this.wsClient = new WebSocket('ws://192.168.7.254/ws');
 
     this.wsClient.on('open', () => {
       this.logger.log('Connected to external WebSocket server');
@@ -43,7 +42,7 @@ export class WebsocketGateway
 
         // Estrai i dati rilevanti
         const sensorData = {
-          macAddress: parsedData.macAddress,
+          macAddress: '01:32:54:67:89:AB',
           humidity: parsedData.humidity,
           pressure: parsedData.pressure,
           temperature: parsedData.temperature,

@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
-@Schema()
+@Schema({ timestamps: true })
 export class SensorRealTime {
   @Prop({ required: true, unique: true })
   macAddress: string;
@@ -15,7 +15,7 @@ export class SensorRealTime {
   pressure: number;
 
   @Prop({ required: true, default: Date.now })
-  updatedAt: Date;
+  timestamp: Date;
 }
 // Schema per i dati in tempo reale con un record per macAddress
 export type SensorRealTimeDocument = SensorRealTime & Document;

@@ -10,6 +10,7 @@ import {
 } from 'src/sensor/schemas/sensor-realtime';
 import { SensorDataService } from './sensor-data.service';
 import { SensorDataController } from './sensor-data.controller';
+import { WebsocketGateway } from 'src/websocket/websocket.gateway';
 
 @Module({
   imports: [
@@ -20,6 +21,6 @@ import { SensorDataController } from './sensor-data.controller';
     ]),
   ],
   controllers: [SensorDataController],
-  providers: [SensorDataService],
+  providers: [SensorDataService, WebsocketGateway],
 })
 export class SensorsModule {}

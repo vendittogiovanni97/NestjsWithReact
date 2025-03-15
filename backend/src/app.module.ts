@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './modules/Users/users.module';
+import { SensorsModule } from './sensor/app.module';
 
 @Module({
   //Il forRoot()metodo accetta lo stesso oggetto di configurazione mongoose.connect()del pacchetto Mongoose//
@@ -11,6 +12,7 @@ import { UsersModule } from './modules/Users/users.module';
         'mongodb://admin:password@localhost:27017/corsoNexus',
     ),
     UsersModule,
+    SensorsModule,
   ],
 })
 export class AppModule {}
